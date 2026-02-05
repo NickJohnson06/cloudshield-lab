@@ -90,12 +90,13 @@ The EC2 instance has **no public IP address** and is reachable only through the 
 
 ## Terraform Structure
 
-terraform/
-main.tf
-variables.tf
-outputs.tf
-versions.tf
-userdata.sh
+```text
+├── main.tf          # Core infrastructure resources (VPC, Subnets, IGW, EC2, ALB)
+├── variables.tf     # Input variables for customization (CIDR blocks, AZs)
+├── outputs.tf       # Output values (ALB DNS name)
+├── providers.tf     # Provider configuration (AWS, version constraints)
+└── terraform.tfvars # (Optional) Local variable definitions (not committed)
+```
 
 ---
 
